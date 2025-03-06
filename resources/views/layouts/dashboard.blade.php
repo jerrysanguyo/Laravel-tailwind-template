@@ -43,8 +43,8 @@
                         </svg>
                     </button>
                     <div x-show="cmsOpen" x-cloak class="pl-4 mt-2 space-y-2">
-                        <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
-                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i> Type</span>
+                        <a href="{{ route('table') }}" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i> Table</span>
                             <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i></span>
                         </a>
                         <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
