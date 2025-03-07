@@ -1,18 +1,19 @@
 @extends('layouts.auth.loginRegister')
 
 @section('content')
-<div class="flex items-center justify-center min-h-screen">
+<div class="flex items-center justify-center min-h-screen ml-5 mr-5">
     <div class="bg-white p-8 rounded-lg shadow-sm w-full max-w-md">
-        <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
-        <p class="mt-6 mb-4 text-center text-gray-600 text-sm">
-            Please enter your credentials to access the admin dashboard. If you need assistance, contact your
+        <img class="w-30 mx-auto block" src="{{ asset('images/treasury_logo.webp') }}" alt="">
+        <h2 class="text-2xl font-bold mb-2 text-center text-gray-800">Office of the City Treasurer</h2>
+        <p class="mb-4 text-center text-gray-600 text-sm">
+            Please enter your credentials to access the dashboard. If you need assistance, contact your
             administrator.
         </p>
         <form action="#" method="POST">
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 text-sm font-medium">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email"
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
                     required>
             </div>
             <div class="mb-6" x-data="{ show: false }">
@@ -20,7 +21,7 @@
                 <div class="relative">
                     <input :type="show ? 'text' : 'password'" id="password" name="password"
                         placeholder="Enter your password"
-                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-700"
                         required>
                     <button type="button" @click="show = !show"
                         class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-600">
@@ -37,8 +38,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.269-2.943-9.543-7a9.956 9.956 0 012.028-3.341m2.385-2.392A9.957 9.957 0 0112 5c4.478 0 8.269 2.943 9.543 7a9.97 9.97 0 01-4.178 5.17">
                             </path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 3l18 18">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18">
                             </path>
                         </svg>
                     </button>
@@ -46,12 +46,12 @@
             </div>
             <div>
                 <button type="submit"
-                    class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors">Login</button>
+                    class="w-full bg-gray-700 text-white py-2 rounded-md hover:bg-gray-300 hover:text-black transition-colors">Login</button>
             </div>
         </form>
         <div class="mt-4 flex justify-between text-sm">
             <a href="#" class="text-blue-500 hover:underline">Forgot Password?</a>
-            <a href="#" class="text-blue-500 hover:underline">Register</a>
+            <!-- <a href="#" class="text-blue-500 hover:underline">Register</a> -->
         </div>
     </div>
 </div>
