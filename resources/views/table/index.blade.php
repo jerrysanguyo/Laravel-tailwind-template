@@ -33,10 +33,14 @@
                     class="block p-3 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-white focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Search for users">
             </div>
-            <button
-                class="px-3 py-1 text-white bg-gray-700 rounded-lg hover:bg-gray-100 hover:text-black hover:border border-gray-300 transition-colors">
-                <i class="fa-solid fa-plus"></i> add
-            </button>
+            <div x-data="{ showModal: false }">
+                <!-- Trigger Button -->
+                <button @click="showModal = true"
+                    class="mt-1 px-5 py-2 text-white bg-gray-700 rounded-lg hover:bg-gray-100 hover:text-black hover:border border-gray-300 transition-colors">
+                    <i class="fa-solid fa-plus"></i> Add
+                </button>
+                @include('table.modal.create')
+            </div>
         </div>
 
         <div class="overflow-x-auto">
