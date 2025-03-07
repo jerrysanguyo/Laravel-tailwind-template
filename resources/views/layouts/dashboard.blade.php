@@ -21,21 +21,82 @@
             :class="{'-translate-x-full': !sidebarOpen, 'w-18': sidebarCollapsed, 'w-64': !sidebarCollapsed}">
 
             <div class="flex items-center justify-center h-16 border-b border-gray-200">
-                <span x-show="!sidebarCollapsed" x-cloak class="font-bold text-xl">Laravel Starter Kit</span>
-                <span x-show="sidebarCollapsed" x-cloak class="font-bold text-xl">LSK</span>
+                <span x-show="!sidebarCollapsed" x-cloak class="font-bold text-xl flex items-center">
+                    <img src="{{ asset('images/treasury_logo.webp') }}" alt="" class="w-10 mr-2">
+                    Real Property Tax
+                </span>
+                <span x-show="sidebarCollapsed" x-cloak class="font-bold text-xl">
+                    <img src="{{ asset('images/treasury_logo.webp') }}" alt="" class="w-10">
+                </span>
             </div>
 
             <nav class="p-4 space-y-2">
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
-                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-table-columns"></i> Dashboard</span>
-                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-table-columns"></i></span>
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-table-columns"></i> Dashboard</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-table-columns"></i></span>
                 </a>
-                
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-flag"></i> Notice
+                        of assessment</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-flag"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-cash-register"></i> Payment system</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-cash-register"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-money-bill-transfer"></i> Tax Deposit</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-money-bill-transfer"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-circle-check"></i> Tax Clearance</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-circle-check"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-circle-xmark"></i> Delinquency</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-circle-xmark"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-file"></i>
+                        Reports</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-file"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-receipt"></i> OR
+                        Manager</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-receipt"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-credit-card"></i>
+                        Online Payment</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-credit-card"></i></span>
+                </a>
+                <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
+                    <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-message"></i>
+                        Message</span>
+                    <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                            class="fa-solid fa-message"></i></span>
+                </a>
+
                 <div x-data="{ cmsOpen: false }" class="block">
                     <button @click="cmsOpen = !cmsOpen"
                         class="w-full text-left py-2 px-3 rounded hover:bg-gray-200 transition focus:outline-none">
-                        <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-toolbox"></i> Cms</span>
-                        <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-toolbox"></i></span>
+                        <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-toolbox"></i>
+                            Cms</span>
+                        <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                                class="fa-solid fa-toolbox"></i></span>
                         <svg x-show="!sidebarCollapsed" x-cloak
                             class="w-4 h-4 inline ml-2 transform transition-transform duration-200"
                             :class="{'rotate-180': cmsOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,22 +105,26 @@
                     </button>
                     <div x-show="cmsOpen" x-cloak class="pl-4 mt-2 space-y-2">
                         <a href="{{ route('table') }}" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
-                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i> Table</span>
-                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i></span>
+                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-font-awesome"></i> Table</span>
+                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-font-awesome"></i></span>
                         </a>
                         <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
-                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i> Ingredient</span>
-                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-font-awesome"></i></span>
+                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-font-awesome"></i> Ingredient</span>
+                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-font-awesome"></i></span>
                         </a>
                     </div>
                 </div>
-                
+
                 <a href="#" class="block py-2 px-3 rounded hover:bg-gray-200 transition">
                     <span x-show="!sidebarCollapsed" x-cloak class="font-medium">Something</span>
                     <span x-show="sidebarCollapsed" x-cloak class="font-medium">S</span>
                 </a>
             </nav>
-            
+
             <div class="mt-auto p-4 border-t border-gray-200" x-data="{ userDropdownOpen: false }">
                 <div class="relative">
                     <button @click="userDropdownOpen = !userDropdownOpen"
@@ -74,16 +139,22 @@
                     <div x-show="userDropdownOpen" x-cloak x-transition
                         class="absolute left-0 bottom-full mb-2 w-full bg-gray-100 shadow-md rounded z-10">
                         <a href="#" class="block py-2 px-3 hover:bg-gray-200 transition">
-                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-gear"></i> Settings</span>
-                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-gear"></i></span>
+                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-gear"></i> Admin Menu</span>
+                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-gear"></i></span>
                         </a>
                         <a href="#" class="block py-2 px-3 hover:bg-gray-200 transition">
-                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-user"></i> Profile</span>
-                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-user"></i></span>
+                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-user"></i> Profile</span>
+                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-user"></i></span>
                         </a>
                         <a href="#" class="block py-2 px-3 hover:bg-gray-200 transition">
-                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-right-from-bracket"></i> Logout</span>
-                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i class="fa-solid fa-right-from-bracket"></i></span>
+                            <span x-show="!sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-right-from-bracket"></i> Logout</span>
+                            <span x-show="sidebarCollapsed" x-cloak class="font-medium"><i
+                                    class="fa-solid fa-right-from-bracket"></i></span>
                         </a>
                     </div>
                 </div>
@@ -101,7 +172,7 @@
                 </button>
                 <h1 class="text-lg font-semibold">Dashboard</h1>
             </header>
-            
+
             <main class="p-4 overflow-y-auto">
                 @yield('content')
             </main>

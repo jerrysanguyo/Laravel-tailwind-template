@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="flex items-center justify-center min-h-screen ml-5 mr-5">
-    <div class="bg-white p-8 rounded-lg shadow-sm w-full max-w-md">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <img class="w-30 mx-auto block" src="{{ asset('images/treasury_logo.webp') }}" alt="">
         <h2 class="text-2xl font-bold mb-2 text-center text-gray-800">Office of the City Treasurer</h2>
         <p class="mb-4 text-center text-gray-600 text-sm">
@@ -49,7 +49,7 @@
                     class="w-full bg-gray-700 text-white py-2 rounded-md hover:bg-gray-300 hover:text-black transition-colors">Login</button>
             </div>
         </form>
-        <div class="mt-4 flex justify-between text-sm">
+        <div class="mt-3 flex justify-between text-sm">
             <a href="#" class="text-blue-500 hover:underline">Forgot Password?</a>
             <!-- <a href="#" class="text-blue-500 hover:underline">Register</a> -->
         </div>
